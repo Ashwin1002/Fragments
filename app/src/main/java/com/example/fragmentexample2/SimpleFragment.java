@@ -1,4 +1,4 @@
-package com.example.fragmentexample1;
+package com.example.fragmentexample2;
 
 import android.os.Bundle;
 
@@ -11,6 +11,8 @@ import android.widget.RadioGroup;
 import android.widget.RatingBar;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.fragmentexample2.R;
 
 
 public class SimpleFragment extends Fragment {
@@ -72,5 +74,9 @@ public class SimpleFragment extends Fragment {
 
 // Return the View for the fragment's UI.
         return rootView;
+    }
+
+    public static SimpleFragment newInstance() {
+        return new SimpleFragment();
     }
 }
