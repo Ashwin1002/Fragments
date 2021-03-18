@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context="com.example.fragmentexample2.MainActivity">
 
     <ImageView
         android:id="@+id/imageView"
@@ -55,5 +55,26 @@
             tools:layout_editor_absoluteX="8dp"
             tools:layout_editor_absoluteY="288dp"/>
     </ScrollView>
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:name="SimpleFragment"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout="@layout/fragment_simple"/>
+
+    <Button
+        android:id="@+id/open_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/standard_margin"
+        android:layout_marginStart="@dimen/standard_margin"
+        android:layout_marginTop="@dimen/standard_margin"
+        android:text="@string/open"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
