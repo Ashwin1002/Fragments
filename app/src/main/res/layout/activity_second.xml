@@ -6,8 +6,9 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/imageView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/image_left_margin"
@@ -19,19 +20,19 @@
         android:contentDescription="@string/image" />
 
     <TextView
-        android:id="@+id/title"
+        android:id="@+id/title2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/margin_wide"
         android:layout_marginLeft="@dimen/margin_wide"
         android:layout_marginEnd="@dimen/margin_wide"
         android:layout_marginRight="@dimen/margin_wide"
-        android:text="@string/title1"
+        android:text="@string/title2"
         android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintLeft_toRightOf="@+id/imageView"
+        app:layout_constraintLeft_toRightOf="@+id/imageView2"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView" />
+        app:layout_constraintTop_toTopOf="@+id/imageView2" />
 
     <ScrollView
         android:layout_width="0dp"
@@ -41,15 +42,15 @@
         android:layout_marginEnd="@dimen/standard_margin"
         android:layout_marginBottom="@dimen/standard_margin"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="@+id/title"
+        app:layout_constraintLeft_toLeftOf="@+id/title2"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/title">
+        app:layout_constraintTop_toBottomOf="@+id/title2">
 
         <TextView
-            android:id="@+id/article"
+            android:id="@+id/article2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/article1"
+            android:text="@string/article2"
             tools:layout_editor_absoluteX="8dp"
             tools:layout_editor_absoluteY="288dp" />
 
@@ -73,16 +74,18 @@
         android:layout_marginTop="@dimen/standard_margin"
         android:text="@string/open"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"/>
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"/>
 
     <Button
-        android:id="@+id/nextButton"
+        android:id="@+id/prev_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:text="@string/next"
-        android:onClick="onNextClick"
+        android:text="@string/previous"
+        android:onClick="onPreviousClick"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/open_button1" />
+        app:layout_constraintTop_toBottomOf="@+id/open_button1"
+        tools:ignore="OnClick" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

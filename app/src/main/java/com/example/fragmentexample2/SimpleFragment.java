@@ -11,8 +11,8 @@ import android.widget.RadioGroup;
 import android.widget.RatingBar;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import com.example.fragmentexample2.R;
+import androidx.annotation.NonNull;
+import androidx.fragment.app.Fragment;
 
 
 public class SimpleFragment extends Fragment {
@@ -27,6 +27,7 @@ public class SimpleFragment extends Fragment {
     public SimpleFragment() {
         // Required empty public constructor
     }
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -43,8 +44,7 @@ public class SimpleFragment extends Fragment {
                                                           public void onCheckedChanged(RadioGroup group, int checkedId) {
                                                               View radioButton = radioGroup.findViewById(checkedId);
                                                               int index = radioGroup.indexOfChild(radioButton);
-                                                              TextView textView =
-                                                                      rootView.findViewById(R.id.fragment_header);
+                                                              TextView textView = rootView.findViewById(R.id.fragment_header);
                                                               switch (index) {
                                                                   case YES: // User chose "Yes."
                                                                       textView.setText(R.string.yes_message);
@@ -59,7 +59,7 @@ public class SimpleFragment extends Fragment {
                                                           }
                                                       });
         // Set the rating bar onCheckedChanged listener.
-        ratingBar.setOnRatingBarChangeListener
+     /*   ratingBar.setOnRatingBarChangeListener
                 (new RatingBar.OnRatingBarChangeListener() {
                     @Override
                     public void onRatingChanged(RatingBar ratingBar,
@@ -70,7 +70,7 @@ public class SimpleFragment extends Fragment {
                         Toast.makeText(getContext(), myRating,
                                 Toast.LENGTH_SHORT).show();
                     }
-                });
+                });*/
 
 // Return the View for the fragment's UI.
         return rootView;
